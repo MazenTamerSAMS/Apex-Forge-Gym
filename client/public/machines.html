@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Machines | ApexForge</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800;900&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="/css/styles.css">
+</head>
+<body>
+  <div class="loader"></div>
+  <nav class="nav">
+    <a class="brand" href="/"><i class="fa-solid fa-dumbbell"></i> ApexForge</a>
+    <div class="nav-links">
+      <a href="/">Home</a><a href="/plans.html">Plans</a><a href="/bmi.html">BMI</a><a href="/machines.html" class="active">Machines</a><a href="/supplements.html">Store</a><a href="/trainers.html">Trainers</a><a href="/contact.html">Contact</a><a id="authLink" href="/auth.html">Login</a>
+    </div>
+    <div class="nav-actions"><span id="userPill"></span><button class="icon-btn" id="themeToggle"><i class="fa-solid fa-circle-half-stroke"></i></button><button class="menu-btn"><i class="fa-solid fa-bars"></i></button></div>
+  </nav>
+
+  <header class="page-hero">
+    <div class="section-head">
+      <div><span class="eyebrow">Equipment Floor</span><h2>Every machine has a purpose.</h2></div>
+      <p>Explore the ApexForge training floor by category, muscle group, and station type before your next session.</p>
+    </div>
+  </header>
+
+  <main class="section compact">
+    <div class="controls">
+      <input id="machineSearch" placeholder="Search machines or muscle groups">
+      <select id="machineFilter">
+        <option value="">All categories</option>
+        <option>Strength</option>
+        <option>Cardio</option>
+        <option>Functional</option>
+        <option>Recovery</option>
+      </select>
+    </div>
+    <div class="grid three" id="machinesGrid"></div>
+  </main>
+
+  <button class="icon-btn to-top"><i class="fa-solid fa-arrow-up"></i></button>
+  <script src="/js/app.js?v=machines-fix-1"></script>
+</body>
+</html>

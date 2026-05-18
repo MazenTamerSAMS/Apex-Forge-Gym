@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Account | ApexForge</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800;900&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="/css/styles.css">
+</head>
+<body>
+  <div class="loader"></div>
+  <nav class="nav">
+    <a class="brand" href="/"><i class="fa-solid fa-dumbbell"></i> ApexForge</a>
+    <div class="nav-links">
+      <a href="/">Home</a>
+      <a href="/plans.html">Plans</a>
+      <a href="/bmi.html">BMI</a>
+      <a href="/machines.html">Machines</a>
+      <a href="/supplements.html">Store</a>
+      <a href="/trainers.html">Trainers</a>
+      <a href="/contact.html">Contact</a>
+      <a class="active" id="authLink" href="/auth.html">Login</a>
+    </div>
+    <div class="nav-actions">
+      <span id="userPill"></span>
+      <button class="icon-btn" id="themeToggle"><i class="fa-solid fa-circle-half-stroke"></i></button>
+      <button class="menu-btn"><i class="fa-solid fa-bars"></i></button>
+    </div>
+  </nav>
+  <header class="page-hero">
+    <div class="section-head">
+      <div>
+        <span class="eyebrow">Account</span>
+        <h2>Your member access starts here.</h2>
+      </div>
+      <p>Manage plans, bookings, BMI history, carts, orders, and saved trainer check plans.</p>
+    </div>
+  </header>
+  <main class="section compact auth-shell">
+    <section class="auth-choice" id="authChoice">
+      <div class="section-head auth-section-head">
+        <div>
+          <span class="eyebrow">Choose Access</span>
+          <h2>Login or register?</h2>
+        </div>
+      </div>
+      <div class="auth-options">
+        <a class="card auth-option" href="/auth.html?mode=login">
+          <i class="fa-solid fa-right-to-bracket feature-icon"></i>
+          <h3>Login</h3>
+          <p>Continue to your profile, subscriptions, and saved plans.</p>
+          <span class="btn"><i class="fa-solid fa-right-to-bracket"></i> Login</span>
+        </a>
+        <a class="card auth-option" href="/auth.html?mode=register">
+          <i class="fa-solid fa-user-plus feature-icon"></i>
+          <h3>Register</h3>
+          <p>Create a member account and start tracking your training.</p>
+          <span class="btn ghost"><i class="fa-solid fa-user-plus"></i> Register</span>
+        </a>
+      </div>
+      <p class="auth-choice-note">Forgot your password? <a href="/auth.html?mode=forgot">Reset it here</a>.</p>
+    </section>
+
+    <section class="auth-panel" id="authLoginPanel">
+      <form class="card auth-form" id="loginForm">
+        <a class="auth-back" href="/auth.html"><i class="fa-solid fa-arrow-left"></i> Change choice</a>
+        <h3>Login</h3>
+        <input name="email" type="email" placeholder="Email" required>
+        <input name="password" type="password" placeholder="Password" required>
+        <a class="auth-back" href="/auth.html?mode=forgot"><i class="fa-solid fa-key"></i> Forgot password?</a>
+        <button class="btn"><i class="fa-solid fa-right-to-bracket"></i> Login</button>
+      </form>
+    </section>
+
+    <section class="auth-panel" id="authRegisterPanel">
+      <form class="card auth-form" id="registerForm">
+        <a class="auth-back" href="/auth.html"><i class="fa-solid fa-arrow-left"></i> Change choice</a>
+        <h3>Register</h3>
+        <input name="fullName" placeholder="Full name" required>
+        <input name="email" type="email" placeholder="Email" required>
+        <input name="password" type="password" placeholder="Password" required>
+        <div class="form-row">
+          <input name="age" type="number" placeholder="Age">
+          <select name="gender">
+            <option value="prefer-not">Gender</option>
+            <option value="male">Male</option>
+            <option value="female">Female</option>
+            <option value="other">Other</option>
+          </select>
+        </div>
+        <button class="btn"><i class="fa-solid fa-user-plus"></i> Create Account</button>
+      </form>
+    </section>
+
+    <section class="auth-panel auth-stack" id="authForgotPanel">
+      <form class="card auth-form" id="forgotPasswordForm">
+        <a class="auth-back" href="/auth.html?mode=login"><i class="fa-solid fa-arrow-left"></i> Back to login</a>
+        <h3>Reset Password</h3>
+        <p class="muted">Enter your account email and we will create a reset code.</p>
+        <input name="email" type="email" placeholder="Email" required>
+        <button class="btn"><i class="fa-solid fa-paper-plane"></i> Get Reset Code</button>
+        <div class="reset-code-box" id="resetCodeBox" hidden></div>
+      </form>
+
+      <form class="card auth-form" id="resetPasswordForm" hidden>
+        <h3>Set New Password</h3>
+        <input name="email" type="email" placeholder="Email" required>
+        <input name="resetCode" placeholder="Reset code" inputmode="numeric" required>
+        <input name="password" type="password" placeholder="New password" required>
+        <button class="btn"><i class="fa-solid fa-lock"></i> Reset Password</button>
+      </form>
+    </section>
+  </main>
+  <script src="/js/app.js"></script>
+</body>
+</html>

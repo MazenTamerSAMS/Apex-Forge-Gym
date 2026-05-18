@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>ApexForge Fitness</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800;900&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+  <link rel="stylesheet" href="/css/styles.css">
+</head>
+<body>
+  <div class="loader"></div>
+  <nav class="nav">
+    <a class="brand" href="/"><i class="fa-solid fa-dumbbell"></i> ApexForge</a>
+    <div class="nav-links">
+      <a class="active" href="/">Home</a><a href="/plans.html">Plans</a><a href="/bmi.html">BMI</a><a href="/machines.html">Machines</a><a href="/supplements.html">Store</a><a href="/trainers.html">Trainers</a><a href="/contact.html">Contact</a><a id="authLink" href="/auth.html">Login</a>
+    </div>
+    <div class="nav-actions"><span id="userPill"></span><button class="icon-btn" id="themeToggle" aria-label="Toggle theme"><i class="fa-solid fa-circle-half-stroke"></i></button><button class="menu-btn" aria-label="Menu"><i class="fa-solid fa-bars"></i></button></div>
+  </nav>
+
+  <header class="hero">
+    <div class="hero-inner">
+      <span class="eyebrow"><i class="fa-solid fa-bolt"></i> ApexForge Performance Club</span>
+      <h1>Discipline, engineered.</h1>
+      <p>Elite strength floors, coached conditioning, nutrition systems, and recovery work built for people who train with intent.</p>
+      <div class="hero-actions">
+        <a class="btn" href="/plans.html"><i class="fa-solid fa-fire-flame-curved"></i> Join Now</a>
+        <a class="btn ghost" href="/trainers.html"><i class="fa-solid fa-user-check"></i> Meet Coaches</a>
+      </div>
+      <div class="hero-grid">
+        <div class="stat"><strong><span class="counter" data-target="1200">0</span>+</strong><span>Active members</span></div>
+        <div class="stat"><strong><span class="counter" data-target="42">0</span></strong><span>Weekly classes</span></div>
+        <div class="stat"><strong><span class="counter" data-target="18">0</span></strong><span>Elite coaches</span></div>
+      </div>
+    </div>
+  </header>
+
+  <main>
+    <section class="section">
+      <div class="section-head"><div><span class="eyebrow">Training System</span><h2>Built around progress you can measure.</h2></div><p>A precise mix of coaching, equipment, nutrition, and body metrics for members who want structure without losing intensity.</p></div>
+      <div class="grid">
+        <article class="card reveal"><i class="fa-solid fa-user-shield feature-icon"></i><h3>Personal Training</h3><p>Specialist coaches for fat loss, strength, hypertrophy, mobility, and performance blocks.</p></article>
+        <article class="card reveal"><i class="fa-solid fa-bowl-food feature-icon"></i><h3>Nutrition Plans</h3><p>Simple, realistic food systems aligned with your goal, body metrics, and training load.</p></article>
+        <article class="card reveal"><i class="fa-solid fa-weight-hanging feature-icon"></i><h3>Modern Equipment</h3><p>Competition racks, plate-loaded machines, sled lanes, cardio, and recovery zones.</p></article>
+        <article class="card reveal"><i class="fa-solid fa-heart-pulse feature-icon"></i><h3>BMI Calculator</h3><p>Track BMI, category, recommendations, and history directly from your member profile.</p></article>
+      </div>
+    </section>
+
+    <section class="section compact">
+      <div class="program-strip reveal">
+        <article><span>01 Strength</span><h3>Heavy floors, tight programming.</h3><p class="muted">Rack work, free weights, and progressive overload cycles.</p></article>
+        <article><span>02 Conditioning</span><h3>Engine work that transfers.</h3><p class="muted">Intervals, sleds, bikes, rowers, and coached class formats.</p></article>
+        <article><span>03 Recovery</span><h3>Reset between hard sessions.</h3><p class="muted">Mobility, warm-up protocols, and recovery-first scheduling.</p></article>
+        <article><span>04 Nutrition</span><h3>Food plans that survive real life.</h3><p class="muted">Protein targets, calorie guidance, and practical meal direction.</p></article>
+      </div>
+    </section>
+
+    <section class="section alt">
+      <div class="section-head"><div><span class="eyebrow">Members</span><h2>Quiet confidence. Visible results.</h2></div></div>
+      <div class="grid three">
+        <article class="card reveal"><p>“The coaching made the plan feel calm. I lost 24 pounds, kept my lifts moving, and finally stopped guessing.”</p><h3>Rina M.</h3></article>
+        <article class="card reveal"><p>“The facility feels serious without being cold. Premium floor, focused trainers, and zero wasted time.”</p><h3>Omar K.</h3></article>
+        <article class="card reveal"><p>“The nutrition work changed everything. My sessions got better once my food stopped being random.”</p><h3>Leah S.</h3></article>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="grid two">
+        <div><span class="eyebrow">FAQ</span><h2>Questions before you start?</h2></div>
+        <div class="card reveal"><h3>Can I change plans?</h3><p>Yes. Members can subscribe, upgrade, or cancel without calling the front desk.</p><h3>Do I need an account?</h3><p>You can browse freely. Bookings, BMI history, carts, and orders are saved to your profile after login.</p></div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <div><strong>ApexForge Fitness</strong><p>Dark, focused, and built for measurable progress.</p><div class="socials"><i class="fa-brands fa-instagram"></i><i class="fa-brands fa-facebook"></i><i class="fa-brands fa-youtube"></i><i class="fa-brands fa-x-twitter"></i></div></div>
+    <form id="newsletterForm"><label>Newsletter</label><input name="email" type="email" placeholder="you@example.com" required><button class="btn small">Subscribe</button></form>
+    <div><p>Open daily 5:00 - 23:00</p><p>Downtown Performance District</p></div>
+  </footer>
+  <button class="icon-btn to-top"><i class="fa-solid fa-arrow-up"></i></button>
+  <script src="/js/app.js"></script>
+</body>
+</html>
